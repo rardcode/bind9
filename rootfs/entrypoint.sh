@@ -40,9 +40,9 @@ fi
 function _main {
  # if it is first execution, put default files in /data dir
  if [ ! -e ${DEST_PATH}/.initialized ]; then
-  [ -e "/data/named.conf" ] || cp "/tmp/named.conf" "/data/"
-  [ -e "/data/db.mydomain.lan.zone" ] || cp "/tmp/db.mydomain.lan.zone" "/data"
-  [ -e "/data/db.192.168.0.zone" ] || cp "/tmp/db.192.168.0.zone" "/data"
+  [ -e "/data/named.conf" ] || cp "/template/named.conf" "/data/"
+  [ -e "/data/db.mydomain.lan.zone" ] || cp "/template/db.mydomain.lan.zone" "/data"
+  [ -e "/data/db.192.168.0.zone" ] || cp "/template/db.192.168.0.zone" "/data"
   touch ${DEST_PATH}/.initialized
  fi
 
