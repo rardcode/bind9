@@ -2,8 +2,8 @@
 ## https://hub.docker.com/_/debian/tags
 FROM debian:13.1-slim
 
-## https://github.com/isc-projects/dhcp/tags
-#ENV bind9V="bind9=1:9.20.12"
+## https://packages.debian.org/search?keywords=bind9
+ENV bind9V="bind9=1:9.20.11-4"
 
 LABEL org.opencontainers.image.authors="rardcode <vagnu00#gmx.com>"
 LABEL Description="Bind9 server based on Debian."
@@ -25,7 +25,7 @@ RUN set -xe && \
   : "---------- SPECIFIC packages INSTALLATION ----------" \
   && apt-get -q -y update \
   && apt-get -q -y -o "DPkg::Options::=--force-confold" -o "DPkg::Options::=--force-confdef" install \
-     bind9 \
+     $bind9V \
   && apt-get -q -y autoremove \
   && apt-get -q -y clean \
   && rm -rf /var/lib/apt/lists/*

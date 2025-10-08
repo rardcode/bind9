@@ -34,9 +34,11 @@ services:
     restart: unless-stopped
 ```
 ## Changelog
-v2.0.0 - 09.09.2025
+v.2.0.1 - 08.10.2025
+- Set env for Bind version in Dockerfile.
+v.2.0.0 - 09.09.2025
 - Debian v. 13.1
 - bind9 v. 1:9.20.11-4
-v1.0.0 - 25.06.2025
+v.1.0.0 - 25.06.2025
 - Debian v. 12.11
 - bind9 v. 1:9.18.33-1~deb12u2
