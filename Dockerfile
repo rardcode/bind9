@@ -3,7 +3,7 @@
 FROM debian:13.1-slim
 
 ## https://packages.debian.org/search?keywords=bind9
-ENV bind9V="bind9=1:9.20.11-4"
+ENV bind9V="bind9=1:9.20.15-1~deb13u1"
 
 LABEL org.opencontainers.image.authors="rardcode <vagnu00#gmx.com>"
 LABEL Description="Bind9 server based on Debian."
